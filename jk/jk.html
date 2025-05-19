@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gaming Phone Shop</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .active-page {
+      background-color: #ef4444;
+      color: white;
+    }
+    section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <!-- Navigation -->
+  <header class="bg-white shadow">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-red-500">Gaming Phone Shop</h1>
+      <nav class="space-x-4">
+        <a href="#home" class="text-gray-700 hover:text-red-500">Home</a>
+        <a href="#products" class="text-gray-700 hover:text-red-500">Products</a>
+        <a href="#contact" class="text-gray-700 hover:text-red-500">Contact Us</a>
+        <button class="text-gray-700 hover:text-red-500" id="menuButton">☰ Menu</button>
+      </nav>
+    </div>
+    <div id="menu" class="hidden bg-white shadow-lg p-4 space-y-4 absolute top-16 right-4 rounded-lg">
+      <a href="#mission" class="block text-gray-700 hover:text-red-500">Mission and Vision</a>
+      <a href="#gallery" class="block text-gray-700 hover:text-red-500">Gallery & Portfolio</a>
+      <a href="#reviews" class="block text-gray-700 hover:text-red-500">Reviews</a>
+      <a href="#blog" class="block text-gray-700 hover:text-red-500">Blog</a>
+      <a href="#faq" class="block text-gray-700 hover:text-red-500">FAQs</a>
+      <a href="#student" class="block text-gray-700 hover:text-red-500">Student Info</a>
+    </div>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="text-center">
+    <h2 class="text-4xl font-bold text-red-600">Welcome to the Ultimate Gaming Phone Shop</h2>
+    <p class="mt-4 text-gray-600">Explore the best gaming phones at unbeatable prices.</p>
+  </section>
+
+  <!-- Mission and Vision Section -->
+  <section id="mission" class="px-4 text-center bg-white">
+    <h2 class="text-3xl font-semibold text-red-600">Mission and Vision</h2>
+    <p class="mt-4 max-w-xl mx-auto text-gray-600">
+      Our mission is to provide gamers with the best-performing mobile devices that enhance their gaming experience, all at an affordable price. We envision becoming the go-to shop for gaming enthusiasts worldwide.
+    </p>
+  </section>
+
+  <!-- Gallery and Portfolio Section -->
+  <section id="gallery" class="px-4 bg-gray-100 text-center">
+    <h2 class="text-3xl font-semibold text-red-600">Gallery & Portfolio</h2>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mt-4">
+      <div class="bg-white p-4 shadow rounded">
+        <img src="https://via.placeholder.com/150" alt="Portfolio 1" class="w-full h-40 object-cover mb-4">
+        <h3 class="text-lg font-semibold">Gaming Setup 1</h3>
+      </div>
+      <div class="bg-white p-4 shadow rounded">
+        <img src="https://via.placeholder.com/150" alt="Portfolio 2" class="w-full h-40 object-cover mb-4">
+        <h3 class="text-lg font-semibold">Gaming Setup 2</h3>
+      </div>
+      <div class="bg-white p-4 shadow rounded">
+        <img src="https://via.placeholder.com/150" alt="Portfolio 3" class="w-full h-40 object-cover mb-4">
+        <h3 class="text-lg font-semibold">Gaming Setup 3</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section id="reviews" class="px-4 text-center">
+    <h2 class="text-3xl font-semibold text-red-600">Customer Reviews</h2>
+    <p class="mt-4 max-w-xl mx-auto text-gray-600">
+      "The Asus ROG Phone 6 is a game-changer! Fantastic performance and amazing visuals." - John D.
+    </p>
+    <p class="mt-4 max-w-xl mx-auto text-gray-600">
+      "Best phone for mobile gaming. I couldn't be happier with my purchase!" - Sarah L.
+    </p>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="max-w-7xl mx-auto px-4">
+    <h2 class="text-3xl font-semibold mb-6 text-red-600">Our Products</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div class="bg-white p-4 shadow rounded">
+        <img src="https://via.placeholder.com/150" alt="Phone 1" class="w-full h-40 object-cover mb-4">
+        <h3 class="text-lg font-semibold">Asus ROG Phone 6</h3>
+        <p class="text-red-600 font-bold">$699</p>
+        <button class="mt-2 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Buy Now</button>
+      </div>
+      <div class="bg-white p-4 shadow rounded">
+        <img src="https://via.placeholder.com/150" alt="Phone 2" class="w-full h-40 object-cover mb-4">
+        <h3 class="text-lg font-semibold">RedMagic 8 Pro</h3>
+        <p class="text-red-600 font-bold">$649</p>
+        <button class="mt-2 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Buy Now</button>
+      </div>
+      <div class="bg-white p-4 shadow rounded">
+        <img src="https://via.placeholder.com/150" alt="Phone 3" class="w-full h-40 object-cover mb-4">
+        <h3 class="text-lg font-semibold">Lenovo Legion Phone Duel 2</h3>
+        <p class="text-red-600 font-bold">$599</p>
+        <button class="mt-2 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Buy Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section id="blog" class="px-4 bg-white text-center">
+    <h2 class="text-3xl font-semibold text-red-600">Latest News and Blog</h2>
+    <div class="mt-4 text-gray-600 max-w-xl mx-auto">
+      <p><strong>New Gaming Phones Coming Soon!</strong></p>
+      <p>Stay tuned for upcoming launches of the hottest gaming phones that will take your mobile gaming to the next level!</p>
+    </div>
+  </section>
+
+  <!-- FAQs Section -->
+  <section id="faq" class="px-4 text-center">
+    <h2 class="text-3xl font-semibold text-red-600">Frequently Asked Questions</h2>
+    <div class="mt-4 max-w-xl mx-auto text-gray-600">
+      <p><strong>Q: What phones are the best for gaming?</strong></p>
+      <p>A: Phones like the Asus ROG Phone 6, RedMagic 8 Pro, and Lenovo Legion Phone Duel 2 offer the best gaming performance.</p>
+      <p><strong>Q: Do you offer international shipping?</strong></p>
+      <p>A: Yes, we ship worldwide with reliable delivery services.</p>
+    </div>
+  </section>
+
+  <!-- Student Info Section -->
+  <section id="student" class="px-4 bg-gray-100 text-center">
+    <h2 class="text-3xl font-semibold text-red-600">About the Student</h2>
+    <div class="mt-4 max-w-xl mx-auto text-gray-600">
+      <p><strong>Name:</strong> jkkkz</p>
+      <p><strong>Grade/Section:</strong> 1f</p>
+      <p><strong>School:</strong> Gaming High School</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="px-4 text-center bg-gray-100">
+    <h2 class="text-3xl font-semibold text-red-600">Contact Us</h2>
+    <p class="mt-2 text-gray-600">Email: support@gamingphoneshop.com</p>
+    <p class="text-gray-600">Phone: +1 800 123 4567</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white py-4 text-center shadow mt-10">
+    <p class="text-gray-600">&copy; 2025 Gaming Phone Shop. All rights reserved.</p>
+  </footer><footer class="bg-gray-900 text-white pt-12 pb-6">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+<div>
+<a href="#" class="text-2xl font-['Pacifico'] text-primary mb-4 inline-block">logo</a>
+<p class="text-gray-400 mb-4">The ultimate destination for gaming phones and accessories. Level up your mobile gaming experience with cutting-edge technology.</p>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
+<i class="ri-twitter-x-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
+<i class="ri-instagram-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
+<i class="ri-youtube-fill"></i>
+</a>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-4">Shop</h3>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Gaming Phones</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Accessories</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Cooling Solutions</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Gaming Earbuds</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Controllers</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Special Offers</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-4">Support</h3>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Contact Us</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">FAQs</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Shipping Policy</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Returns & Refunds</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Warranty Information</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Gaming Guides</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+<p class="text-gray-400 mb-4">Subscribe to get special offers, free giveaways, and gaming tips.</p>
+<div class="flex mb-4">
+<input type="email" placeholder="Your email address" class="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-primary text-white">
+<button class="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-r-lg transition-colors !rounded-button whitespace-nowrap">Subscribe</button>
+</div>
+<div class="flex flex-wrap gap-2">
+<div class="w-8 h-5 flex items-center justify-center">
+<i class="ri-visa-fill text-gray-300 ri-lg"></i>
+</div>
+<div class="w-8 h-5 flex items-center justify-center">
+<i class="ri-mastercard-fill text-gray-300 ri-lg"></i>
+</div>
+<div class="w-8 h-5 flex items-center justify-center">
+<i class="ri-paypal-fill text-gray-300 ri-lg"></i>
+</div>
+<div class="w-8 h-5 flex items-center justify-center">
+<i class="ri-apple-fill text-gray-300 ri-lg"></i>
+</div>
+<div class="w-8 h-5 flex items-center justify-center">
+<i class="ri-google-fill text-gray-300 ri-lg"></i>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-6 border-t border-gray-800 text-center text-gray-400 text-sm">
+<p>© 2025 GameGear. All rights reserved. Designed for gaming enthusiasts.</p>
+</div>
+</div>
+</footer>
+
+  <script>
+    document.getElementById('menuButton').addEventListener('click', function () {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROG Gaming Panda Phone</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#FF0029',secondary:'#222222'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+        }
+        .gaming-gradient {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+        }
+        .red-glow {
+            box-shadow: 0 0 15px rgba(255, 0, 41, 0.5);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 0, 41, 0.3);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            height: 5px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #1a1a1a;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #FF0029;
+            border-radius: 5px;
+        }
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        .category-item:hover .category-icon {
+            color: #FF0029;
+            transform: scale(1.1);
+        }
+        .hero-section {
+            background: url(img/background.webp);
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .hero-overlay {
+            background: linear-gradient(90deg, rgba(10,10,10,0.9) 0%, rgba(10,10,10,0.7) 50%, rgba(10,10,10,0.5) 100%);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-secondary sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="#" class="flex items-center">
+                        <div class="font-['Pacifico'] text-primary text-2xl">panda</div>
+                        <span class="ml-2 text-white font-bold">Phone</span>
+                    </a>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="hidden md:block">
+                    <ul class="flex space-x-8">
+                        <li><a href="#" class="text-white hover:text-primary font-medium transition-colors">Home</a></li>
+                        <li><a href="#" class="text-white hover:text-primary font-medium transition-colors">Products</a></li>
+                        <li><a href="#" class="text-white hover:text-primary font-medium transition-colors">Deals</a></li>
+                        <li><a href="#" class=" text-white hover:text-primary font-medium transition-colors">Support</a></li>
+                    </ul>
+                </nav>
+                    
+                    <div class="w-9 h-9 flex items-center justify-center bg-[#333333] rounded-button text-white hover:bg-primary transition-colors">
+                        <i class="ri-user-line"></i>
+                    </div>
+                    
+                    <button class="md:hidden w-9 h-9 flex items-center justify-center bg-[#333333] rounded-button text-white hover:bg-primary transition-colors">
+                        <i class="ri-menu-line"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section h-[600px] relative">
+        <div class="hero-overlay absolute inset-0"></div>
+        <div class="container mx-auto px-4 h-full flex items-center relative z-10">
+            <div class="w-full md:w-1/2 space-y-6">
+                <h1 class="text-4xl md:text-6xl font-bold">
+                    <span class="text-white">NEXT-GEN</span>
+                    <span class="text-primary"> PANDA</span>
+                    <span class="text-white"> PHONES</span>
+                </h1>
+                <p class="text-gray-300 text-lg md:text-xl max-w-md">
+                    Experience unparalleled gaming performance with the latest PANDA gaming phones. Designed for gamers, built for victory.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <button class="bg-primary text-white px-6 py-3 font-bold rounded-button hover:bg-red-700 transition-colors !rounded-button whitespace-nowrap">
+                        SHOP NOW
+                    </button>
+                    <button class="bg-transparent border-2 border-white text-white px-6 py-3 font-bold rounded-button hover:border-primary hover:text-primary transition-colors !rounded-button whitespace-nowrap">
+                        LEARN MORE
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="py-16 gaming-gradient">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold">Featured Gaming Phones</h2>
+                <a href="#" class="text-primary hover:underline font-medium">View All</a>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Product Card 1 -->
+                <div class="bg-[#1a1a1a] rounded-lg overflow-hidden card-hover transition-all duration-300">
+                    <div class="relative">
+                        <img src="img/ROG1.png" alt="ROG Phone 7" class="w-full h-64 object-cover object-top">
+                        <div class="absolute top-3 right-3 bg-primary text-white text-xs font-bold px-2 py-1 rounded">NEW</div>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">ROG Phone 7 Ultimate</h3>
+                            <div class="flex items-center">
+                                <i class="ri-heart-line text-gray-400 hover:text-primary cursor-pointer"></i>
+                            </div>
+                        </div>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-500">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-half-fill"></i>
+                            </div>
+                            <span class="text-gray-400 text-sm ml-2">(128)</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-[#333333] text-xs text-gray-300 px-2 py-1 rounded">Snapdragon 8 Gen 2</span>
+                            <span class="bg-[#333333] text-xs text-gray-300 px-2 py-1 rounded">16GB RAM</span>
+                            <span class="bg-[#333333] text-xs text-gray-300 px-2 py-1 rounded">6.8" AMOLED</span>
+                            <span class="bg-[#333333] text-xs text-gray-300 px-2 py-1 rounded">165Hz</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-gray-400 line-through">$1,299.99</span>
+                                <p class="text-2xl font-bold text-primary">$1,199.99</p>
+                            </div>
+                            <button class="bg-primary text-white px-4 py-2 rounded-button hover:bg-red-700 transition-colors !rounded-button whitespace-nowrap">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Card 2 -->
+                <div class="bg-[#1a1a1a] rounded-lg overflow-hidden card-hover transition-all duration-300">
+                    <div class="relative">
+                        <img src="img/phone2.webp" alt="ROG Phone 7 Pro" class="w-full h-64 object-cover object-top">
+                        <div class="absolute top-3 right-3 bg-[#333333] text-white text-xs font-bold px-2 py-1 rounded">POPULAR</div>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">ROG Phone 7 Pro</h3>
+                            <div class="flex items-center">
+                                <i class="ri-heart-line text-gray-400 hover:text-primary cursor-pointer"></i>
+                            </div>
+                        </div>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-500">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-line"></i>
+                            </div>
+                            <span class="text-gray-400 text-sm ml-2">(96)</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-[#333333] text-xs text-gray-300 px-2 py-1 rounded">Snapdragon 8 Gen 2</span>
+                            <span class="bg-[#333333] text-xs text-gray-300 px-2 py-1 rounded">12GB RAM</span>
+                            <span class="bg-[#333333] text-xs text-gray-300 px-2 py-1 rounded">6.8" AMOLED</span>
+                            <span class="bg-[#333333] text-xs text-gray-300 px-2 py-1 rounded">165Hz</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <p class="text-2xl font-bold text-primary">$999.99</p>
+                            <button class="bg-primary text-white px-4 py-2 rounded-button hover:bg-red-700 transition-colors !rounded-button whitespace-nowrap">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Card 3 -->
+                <div class="bg-[#1a1a1a] rounded-lg overflow-hidden card-hover transition-all duration-300">
+                    <div class="relative">
+                        <img src="img/rog3.webp" alt="ROG Phone 7" class="w-full h-64 object-cover object-top">
+                        <div class="absolute top-3 right-3 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded">SALE</div>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">ROG Phone 7</h3>
+                            <div class="flex items-center">
+                                <i class="ri-heart-line text-gray-400 hover:text-primary cursor-pointer"></i>
+                            </div>
+                        </div>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-500">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                            </div>
+                            <span class="text-gray-400 text-sm ml-2">(215)</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-[#333333] text-xs text-gray-300 px-2 py-1 rounded">Snapdragon 8 Gen 2</span>
+                            <span class="bg-[#333333] text-xs text-gray-300 px-2 py-1 rounded">8GB RAM</span>
+                            <span class="bg-[#333333] text-xs text-gray-300 px-2 py-1 rounded">6.8" AMOLED</span>
+                            <span class="bg-[#333333] text-xs text-gray-300 px-2 py-1 rounded">144Hz</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-gray-400 line-through">$899.99</span>
+                                <p class="text-2xl font-bold text-primary">$799.99</p>
+                            </div>
+                            <button class="bg-primary text-white px-4 py-2 rounded-button hover:bg-red-700 transition-colors !rounded-button whitespace-nowrap">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Card 4 -->
+                <div class="bg-[#1a1a1a] rounded-lg overflow-hidden card-hover transition-all duration-300">
+                    <div class="relative">
+                        <img src="img/ROG4.png" alt="ROG Phone 6 Diablo Edition" class="w-full h-64 object-cover object-top">
+                        <div class="absolute top-3 right-3 bg-purple-600 text-white text-xs font-bold px-2 py-1 rounded">LIMITED</div>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">ROG Phone 6 Diablo Edition</h3>
+                            <div class="flex items-center">
+                                <i class="ri-heart-line text-gray-400 hover:text-primary cursor-pointer"></i>
+                            </div>
+                        </div>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-500">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-half-fill"></i>
+                            </div>
+                            <span class="text-gray-400 text-sm ml-2">(87)</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-[#333333] text-xs text-gray-300 px-2 py-1 rounded">Snapdragon 8+ Gen 1</span>
+                            <span class="bg-[#333333] text-xs text-gray-300 px-2 py-1 rounded">16GB RAM</span>
+                            <span class="bg-[#333333] text-xs text-gray-300 px-2 py-1 rounded">6.78" AMOLED</span>
+                            <span class="bg-[#333333] text-xs text-gray-300 px-2 py-1 rounded">165Hz</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <p class="text-2xl font-bold text-primary">$1,299.99</p>
+                            <button class="bg-primary text-white px-4 py-2 rounded-button hover:bg-red-700 transition-colors !rounded-button whitespace-nowrap">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Card 5 -->
+                <div class="bg-[#1a1a1a] rounded-lg overflow-hidden card-hover transition-all duration-300">
+                    <div class="relative">
+                        <img src="img/rog5.jpg" alt="ROG Phone 6 Pro" class="w-full h-64 object-cover object-top">
+                    </div>
+                    <div class="p-5">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">ROG Phone 6 Pro</h3>
+                            <div class="flex items-center">
+                                <i class="ri-heart-line text-gray-400 hover:text-primary cursor-pointer"></i>
+                            </div>
+                        </div>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-500">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-line"></i>
+                            </div>
+                            <span class="text-gray-400 text-sm ml-2">(142)</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-[#333333] text-xs text-gray-300 px-2 py-1 rounded">Snapdragon 8+ Gen 1</span>
+                            <span class="bg-[#333333] text-xs text-gray-300 px-2 py-1 rounded">18GB RAM</span>
+                            <span class="bg-[#333333] text-xs text-gray-300 px-2 py-1 rounded">6.78" AMOLED</span>
+                            <span class="bg-[#333333] text-xs text-gray-300 px-2 py-1 rounded">165Hz</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-gray-400 line-through">$1,099.99</span>
+                                <p class="text-2xl font-bold text-primary">$949.99</p>
+                            </div>
+                            <button class="bg-primary text-white px-4 py-2 rounded-button hover:bg-red-700 transition-colors !rounded-button whitespace-nowrap">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Card 6 -->
+                <div class="bg-[#1a1a1a] rounded-lg overflow-hidden card-hover transition-all duration-300">
+                    <div class="relative">
+                        <img src="img/rog6.webp" alt="ROG Phone 6" class="w-full h-64 object-cover object-top">
+                    </div>
+                    <div class="p-5">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">ROG Phone 6</h3>
+                            <div class="flex items-center">
+                                <i class="ri-heart-line text-gray-400 hover:text-primary cursor-pointer"></i>
+                            </div>
+                        </div>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-500">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-half-fill"></i>
+                            </div>
+                            <span class="text-gray-400 text-sm ml-2">(176)</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-[#333333] text-xs text-gray-300 px-2 py-1 rounded">Snapdragon 8+ Gen 1</span>
+                            <span class="bg-[#333333] text-xs text-gray-300 px-2 py-1 rounded">12GB RAM</span>
+                            <span class="bg-[#333333] text-xs text-gray-300 px-2 py-1 rounded">6.78" AMOLED</span>
+                            <span class="bg-[#333333] text-xs text-gray-300 px-2 py-1 rounded">165Hz</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-gray-400 line-through">$899.99</span>
+                                <p class="text-2xl font-bold text-primary">$749.99</p>
+                            </div>
+                            <button class="bg-primary text-white px-4 py-2 rounded-button hover:bg-red-700 transition-colors !rounded-button whitespace-nowrap">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gaming Features Section -->
+    <section class="py-16 bg-black">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">Ultimate Gaming Experience</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Engineered for Gaming Perfection</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 flex items-center justify-center bg-primary rounded-full flex-shrink-0 mr-4">
+                                <i class="ri-cpu-line text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold mb-2">Extreme Performance</h4>
+                                <p class="text-gray-400">Powered by the latest Snapdragon 8 Gen 2 processor with up to 18GB RAM for seamless gaming performance even with the most demanding titles.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 flex items-center justify-center bg-primary rounded-full flex-shrink-0 mr-4">
+                                <i class="ri-gamepad-line text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold mb-2">Gaming-First Design</h4>
+                                <p class="text-gray-400">Dedicated AirTrigger 6 ultrasonic buttons, advanced haptics, and programmable RGB lighting for a truly immersive gaming experience.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 flex items-center justify-center bg-primary rounded-full flex-shrink-0 mr-4">
+                                <i class="ri-eye-line text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold mb-2">Stunning Display</h4>
+                                <p class="text-gray-400">6.8" AMOLED display with 165Hz refresh rate, 1ms response time, and 720Hz touch sampling rate for ultra-smooth, responsive gameplay.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 flex items-center justify-center bg-primary rounded-full flex-shrink-0 mr-4">
+                                <i class="ri-battery-charge-line text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold mb-2">Marathon Gaming</h4>
+                                <p class="text-gray-400">6000mAh dual battery with 65W fast charging and advanced battery care features to keep you gaming longer without interruptions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <img src="" alt="ROG Phone Features" class="w-full rounded-lg shadow-2xl red-glow">
+                    
+                    <div class="absolute bottom-4 left-4 right-4 flex justify-between">
+                        <div class="bg-black bg-opacity-80 px-4 py-3 rounded-lg">
+                            <div class="text-xs text-gray-400 mb-1">Performance Score</div>
+                            <div class="text-xl font-bold text-primary">1,450,000+</div>
+                        </div>
+                        
+                        <div class="bg-black bg-opacity-80 px-4 py-3 rounded-lg">
+                            <div class="text-xs text-gray-400 mb-1">Cooling Efficiency</div>
+                            <div class="text-xl font-bold text-primary">15°C Lower</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+     <!-- Reviews -->
+     <section class="py-16 relative">
+        <div class="absolute inset-0" style="background-image: url(''); background-size: cover; background-position: center; opacity: 0.3;"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-4">REVIEWS</h2>
+                <p class="text-gray-300 text-lg mb-8">Some reviews from our clients about our Phone</p>
+                
+                <!-- Reviews Section -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    
+                    <!-- Review 1 -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <img src="img/vince.jpg" alt="Reviewer 1" class="w-16 h-16 rounded-full mx-auto mb-4">
+                        <h3 class="text-xl font-semibold mb-2">Vince Fekiciano</h3>
+                        <p class="text-gray-600">"This phone has transformed my daily routine. The camera is stunning, and the performance is top-notch!"</p>
+                    </div>
+    
+                    <!-- Review 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <img src="img/review2.jpg" alt="Reviewer 2" class="w-16 h-16 rounded-full mx-auto mb-4">
+                        <h3 class="text-xl font-semibold mb-2">John Louie Velasquez</h3>
+                        <p class="text-gray-600">"Incredible battery life and seamless user experience. Couldn't ask for a better phone!"</p>
+                    </div>
+    
+                    <!-- Review 3 -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <img src="img/review3.jpg" alt="Reviewer 3" class="w-16 h-16 rounded-full mx-auto mb-4">
+                        <h3 class="text-xl font-semibold mb-2">Shaina Saguinsin</h3>
+                        <p class="text-gray-600">"Love the sleek design and the speed. Definitely recommend to anyone looking for a high-quality phone."</p>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+
+    <!-- Call to Action -->
+    <section class="py-16 relative">
+        <div class="absolute inset-0" style="background-image: url('img/calltoaction-bg.jpg'); background-size: cover; background-position: center; opacity: 0.3;"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-4">Join the ROG Gaming Community</h2>
+                <p class="text-gray-300 text-lg mb-8">Subscribe to our newsletter for exclusive deals, gaming tips, and early access to new product releases.</p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center max-w-xl mx-auto">
+                    <input type="email" placeholder="Enter your email address" class="flex-grow px-5 py-3 rounded-button bg-[#1a1a1a] border-none text-white focus:outline-none focus:ring-2 focus:ring-primary">
+                    <button class="bg-primary text-white px-8 py-3 font-bold rounded-button hover:bg-red-700 transition-colors !rounded-button whitespace-nowrap">
+                        Subscribe Now
+                    </button>
+                </div>
+                
+                <div class="mt-6 text-sm text-gray-500">
+                    By subscribing, you agree to our Privacy Policy and Terms of Service.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#0a0a0a] pt-16 pb-8 border-t border-[#222222]">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="font-['Pacifico'] text-primary text-2xl">logo</div>
+                        <span class="ml-2 text-white font-bold">GAMING</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">Experience the ultimate gaming performance with ROG gaming phones. Designed for gamers, built for victory.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-[#1a1a1a] rounded-full text-gray-400 hover:bg-primary hover:text-white transition-colors">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-[#1a1a1a] rounded-full text-gray-400 hover:bg-primary hover:text-white transition-colors">
+                            <i class="ri-twitter-x-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-[#1a1a1a] rounded-full text-gray-400 hover:bg-primary hover:text-white transition-colors">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-[#1a1a1a] rounded-full text-gray-400 hover:bg-primary hover:text-white transition-colors">
+                            <i class="ri-youtube-fill"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Products</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Deals</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Support</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Customer Service</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">FAQ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Shipping Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Returns & Refunds</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Order Tracking</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Warranty</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Contact Us</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center text-primary mr-3 mt-1">
+                                <i class="ri-map-pin-line"></i>
+                            </div>
+                            <span class="text-gray-400">256, Purok 5, Sta Ines, Mabalcat City, Pampanga</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center text-primary mr-3 mt-1">
+                                <i class="ri-phone-line"></i>
+                            </div>
+                            <span class="text-gray-400"> +63 994-469-2662</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center text-primary mr-3 mt-1">
+                                <i class="ri-mail-line"></i>
+                            </div>
+                            <span class="text-gray-400">support@pandaroggaming.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center text-primary mr-3 mt-1">
+                                <i class="ri-time-line"></i>
+                            </div>
+                            <span class="text-gray-400">24/7 Customer Support</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-[#222222] pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-gray-500 text-sm mb-4 md:mb-0">
+                        © 2025 ROG Gaming. All rights reserved.
+                    </div>
+                    
+                    <div class="flex items-center space-x-4">
+                        <div class="text-gray-500 text-sm mr-4">Payment Methods:</div>
+                        <div class="w-8 h-8 flex items-center justify-center text-gray-400">
+                            <i class="ri-visa-fill ri-lg"></i>
+                        </div>
+                        <div class="w-8 h-8 flex items-center justify-center text-gray-400">
+                            <i class="ri-mastercard-fill ri-lg"></i>
+                        </div>
+                        <div class="w-8 h-8 flex items-center justify-center text-gray-400">
+                            <i class="ri-paypal-fill ri-lg"></i>
+                        </div>
+                        <div class="w-8 h-8 flex items-center justify-center text-gray-400">
+                            <i class="ri-apple-fill ri-lg"></i>
+                        </div>
+                        <div class="w-8 h-8 flex items-center justify-center text-gray-400">
+                            <i class="ri-alipay-fill ri-lg"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Chat Button -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <button class="w-14 h-14 flex items-center justify-center bg-primary rounded-full shadow-lg hover:bg-red-700 transition-colors relative">
+            <i class="ri-customer-service-2-line text-white ri-xl"></i>
+            <span class="absolute -top-1 -right-1 w-5 h-5 flex items-center justify-center bg-white text-primary text-xs font-bold rounded-full">1</span>
+        </button>
+    </div>
+
+    <!-- Compare Products Floating Button -->
+    <div class="fixed bottom-6 left-6 z-50">
+        <button class="w-14 h-14 flex items-center justify-center bg-[#1a1a1a] rounded-full shadow-lg hover:bg-[#333333] transition-colors relative">
+            <i class="ri-scales-3-line text-white ri-xl"></i>
+            <span class="absolute -top-1 -right-1 w-5 h-5 flex items-center justify-center bg-primary text-white text-xs font-bold rounded-full">2</span>
+        </button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileMenuButton = document.querySelector('.md\\:hidden');
+            if (mobileMenuButton) {
+                mobileMenuButton.addEventListener('click', function() {
+                    // Mobile menu functionality would go here
+                    console.log('Mobile menu clicked');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

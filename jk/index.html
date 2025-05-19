@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GameGear - Premium Gaming Phones</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#6d28d9',secondary:'#10b981'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Poppins', sans-serif;
+}
+.gaming-glow {
+box-shadow: 0 0 15px rgba(109, 40, 217, 0.5);
+}
+.gaming-card {
+transition: all 0.3s ease;
+}
+.gaming-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 25px rgba(109, 40, 217, 0.2);
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+.custom-checkbox {
+appearance: none;
+width: 20px;
+height: 20px;
+border: 2px solid #d1d5db;
+border-radius: 4px;
+position: relative;
+cursor: pointer;
+transition: all 0.2s ease;
+}
+.custom-checkbox:checked {
+background-color: #6d28d9;
+border-color: #6d28d9;
+}
+.custom-checkbox:checked::after {
+content: '';
+position: absolute;
+left: 6px;
+top: 2px;
+width: 6px;
+height: 12px;
+border: solid white;
+border-width: 0 2px 2px 0;
+transform: rotate(45deg);
+}
+.custom-radio {
+appearance: none;
+width: 20px;
+height: 20px;
+border: 2px solid #d1d5db;
+border-radius: 50%;
+position: relative;
+cursor: pointer;
+transition: all 0.2s ease;
+}
+.custom-radio:checked {
+border-color: #6d28d9;
+}
+.custom-radio:checked::after {
+content: '';
+position: absolute;
+left: 4px;
+top: 4px;
+width: 8px;
+height: 8px;
+border-radius: 50%;
+background-color: #6d28d9;
+}
+.custom-switch {
+position: relative;
+display: inline-block;
+width: 44px;
+height: 24px;
+}
+.custom-switch input {
+opacity: 0;
+width: 0;
+height: 0;
+}
+.switch-slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #e5e7eb;
+transition: .4s;
+border-radius: 24px;
+}
+.switch-slider:before {
+position: absolute;
+content: "";
+height: 18px;
+width: 18px;
+left: 3px;
+bottom: 3px;
+background-color: white;
+transition: .4s;
+border-radius: 50%;
+}
+input:checked + .switch-slider {
+background-color: #6d28d9;
+}
+input:checked + .switch-slider:before {
+transform: translateX(20px);
+}
+.custom-range {
+-webkit-appearance: none;
+width: 100%;
+height: 6px;
+border-radius: 5px;
+background: #e5e7eb;
+outline: none;
+}
+.custom-range::-webkit-slider-thumb {
+-webkit-appearance: none;
+appearance: none;
+width: 18px;
+height: 18px;
+border-radius: 50%;
+background: #6d28d9;
+cursor: pointer;
+}
+.custom-range::-moz-range-thumb {
+width: 18px;
+height: 18px;
+border-radius: 50%;
+background: #6d28d9;
+cursor: pointer;
+border: none;
+}
+.performance-bar {
+height: 6px;
+border-radius: 3px;
+background: linear-gradient(to right, #10b981, #6d28d9);
+}
+.hero-section {
+background-image: linear-gradient(to right, rgba(15, 15, 25, 0.9) 30%, rgba(15, 15, 25, 0.7) 50%, rgba(15, 15, 25, 0.5) 70%, rgba(15, 15, 25, 0.3) 85%, rgba(15, 15, 25, 0.1) 100%), url('https://readdy.ai/api/search-image?query=A%20futuristic%20gaming%20smartphone%20with%20RGB%20lighting%20effects%2C%20floating%20in%20a%20dark%20tech%20environment%20with%20neon%20purple%20and%20blue%20grid%20lines%2C%20sleek%20design%2C%20high-resolution%20render%2C%20dramatic%20lighting%2C%20ultra-detailed%2C%208k%20quality%2C%20product%20photography%20style&width=1600&height=800&seq=1&orientation=landscape');
+background-size: cover;
+background-position: center;
+}
+</style>
+</head>
+<body class="bg-gray-50">
+<!-- Header -->
+<header class="bg-gray-900 text-white shadow-lg">
+<div class="container mx-auto px-4 py-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center">
+<a href="#" class="text-2xl font-['Pacifico'] text-primary mr-8">logo</a>
+<nav class="hidden md:flex space-x-6">
+<a href="#home" class="hover:text-primary transition-colors">Home</a>
+<a href="#shop" class="hover:text-primary transition-colors">Shop</a>
+<a href="#compare" class="hover:text-primary transition-colors">Compare</a>
+<a href="#deals" class="hover:text-primary transition-colors">Deals</a>
+<a href="#support" class="hover:text-primary transition-colors">Support</a>
+</nav>
+</div>
+<div class="flex items-center space-x-4">
+<div class="relative w-64">
+<input type="text" placeholder="Search gaming phones..." class="w-full py-2 pl-10 pr-4 bg-gray-800 text-white rounded-button border-none focus:outline-none focus:ring-2 focus:ring-primary text-sm">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<i class="ri-search-line text-gray-400"></i>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<a href="#" class="relative w-10 h-10 flex items-center justify-center text-gray-300 hover:text-primary transition-colors">
+<i class="ri-heart-line ri-lg"></i>
+</a>
+<a href="#" class="relative w-10 h-10 flex items-center justify-center text-gray-300 hover:text-primary transition-colors">
+<i class="ri-user-line ri-lg"></i>
+</a>
+<a href="#" class="relative w-10 h-10 flex items-center justify-center text-gray-300 hover:text-primary transition-colors">
+<i class="ri-shopping-cart-line ri-lg"></i>
+<span class="absolute -top-1 -right-1 bg-primary text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">3</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Category Quick Access -->
+<div class="bg-gray-800 py-2">
+<div class="container mx-auto px-4">
+<div class="flex items-center justify-between overflow-x-auto whitespace-nowrap py-1 gap-6">
+<a href="#" class="text-sm text-gray-300 hover:text-primary flex items-center">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-rocket-line"></i>
+</div>
+Performance Gaming
+</a>
+<a href="#" class="text-sm text-gray-300 hover:text-primary flex items-center">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-gamepad-line"></i>
+</div>
+Budget Gaming
+</a>
+<a href="#" class="text-sm text-gray-300 hover:text-primary flex items-center">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-vip-crown-line"></i>
+</div>
+Premium Gaming
+</a>
+<a href="#" class="text-sm text-gray-300 hover:text-primary flex items-center">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-cpu-line"></i>
+</div>
+Cooling Tech
+</a>
+<a href="#" class="text-sm text-gray-300 hover:text-primary flex items-center">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-battery-charge-line"></i>
+</div>
+Battery Life
+</a>
+<a href="#" class="text-sm text-gray-300 hover:text-primary flex items-center">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-coupon-3-line"></i>
+</div>
+Special Offers
+</a>
+</div>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section id="home" class="hero-section h-[500px] flex items-center">
+<div class="container mx-auto px-4 w-full">
+<div class="max-w-2xl">
+<span class="inline-block bg-primary bg-opacity-90 text-white px-4 py-1 rounded-full text-sm font-medium mb-4">NEW ARRIVALS</span>
+<h1 class="text-4xl md:text-5xl font-bold text-white leading-tight mb-4">Ultimate Gaming <br>Experience On Mobile</h1>
+<p class="text-gray-200 mb-8 text-lg">Discover the latest gaming smartphones with cutting-edge technology, designed for maximum performance and immersive gameplay.</p>
+<div class="flex flex-wrap gap-4">
+<a href="#shop" class="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-button font-medium transition-colors !rounded-button whitespace-nowrap">Shop Now</a>
+<a href="#compare" class="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white border border-white/30 px-6 py-3 rounded-button font-medium transition-colors !rounded-button whitespace-nowrap">Compare Models</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Category Navigation -->
+<section id="shop" class="py-12 bg-white">
+<div class="container mx-auto px-4">
+<h2 class="text-3xl font-bold text-gray-900 text-center mb-8">Browse By Category</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+<!-- Category 1 -->
+<div class="gaming-card bg-gradient-to-br from-gray-100 to-white rounded-lg shadow-md overflow-hidden border border-gray-200">
+<div class="p-6">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+<i class="ri-rocket-line ri-xl text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold text-center mb-2">Performance Gaming</h3>
+<p class="text-gray-600 text-center text-sm mb-4">High-end processors & cooling systems for intense gaming sessions</p>
+<div class="text-center">
+<span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">12 Products</span>
+</div>
+</div>
+</div>
+<!-- Category 2 -->
+<div class="gaming-card bg-gradient-to-br from-gray-100 to-white rounded-lg shadow-md overflow-hidden border border-gray-200">
+<div class="p-6">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+<i class="ri-gamepad-line ri-xl text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold text-center mb-2">Budget Gaming</h3>
+<p class="text-gray-600 text-center text-sm mb-4">Affordable options with great gaming capabilities for casual gamers</p>
+<div class="text-center">
+<span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">8 Products</span>
+</div>
+</div>
+</div>
+<!-- Category 3 -->
+<div class="gaming-card bg-gradient-to-br from-gray-100 to-white rounded-lg shadow-md overflow-hidden border border-gray-200">
+<div class="p-6">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+<i class="ri-vip-crown-line ri-xl text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold text-center mb-2">Premium Gaming</h3>
+<p class="text-gray-600 text-center text-sm mb-4">Flagship devices with top-tier specs for professional gaming</p>
+<div class="text-center">
+<span class="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">6 Products</span>
+</div>
+</div>
+</div>
+<!-- Category 4 -->
+<div class="gaming-card bg-gradient-to-br from-gray-100 to-white rounded-lg shadow-md overflow-hidden border border-gray-200">
+<div class="p-6">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+<i class="ri-cpu-line ri-xl text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold text-center mb-2">Cooling Tech</h3>
+<p class="text-gray-600 text-center text-sm mb-4">Advanced cooling solutions for extended gaming without throttling</p>
+<div class="text-center">
+<span class="inline-block bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full">Hot Deal</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Products -->
+<section id="compare" class="py-12 bg-gray-50 comparison-tool">
+<div class="container mx-auto px-4">
+<div class="flex justify-between items-center mb-8">
+<h2 class="text-3xl font-bold text-gray-900">Featured Gaming Phones</h2>
+<div class="flex gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 hover:border-primary hover:text-primary transition-colors">
+<i class="ri-arrow-left-s-line ri-lg"></i>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 hover:border-primary hover:text-primary transition-colors">
+<i class="ri-arrow-right-s-line ri-lg"></i>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+<!-- Product 1 -->
+<div class="gaming-card bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=A%20sleek%20black%20gaming%20smartphone%20with%20RGB%20lighting%20on%20the%20edges%2C%20floating%20against%20a%20dark%20tech%20background%2C%20ultra-detailed%20product%20photography%2C%208k%20resolution%2C%20studio%20lighting%2C%20professional%20product%20shot&width=600&height=600&seq=2&orientation=squarish" alt="ROG Phone 7 Ultimate" class="w-full h-64 object-cover object-top">
+<span class="absolute top-3 left-3 bg-primary text-white text-xs px-2 py-1 rounded-full">New Arrival</span>
+<button class="absolute top-3 right-3 w-8 h-8 flex items-center justify-center bg-white/80 backdrop-blur-sm rounded-full hover:bg-primary hover:text-white transition-colors">
+<i class="ri-heart-line"></i>
+</button>
+</div>
+<div class="p-4">
+<div class="flex justify-between items-center mb-2">
+<h3 class="text-lg font-semibold">ROG Phone 7 Ultimate</h3>
+<div class="flex items-center bg-green-100 px-2 py-1 rounded-full">
+<span class="text-green-800 text-xs font-medium">9.8</span>
+<div class="w-4 h-4 flex items-center justify-center ml-1">
+<i class="ri-game-line text-green-800 text-xs"></i>
+</div>
+</div>
+</div>
+<div class="mb-3">
+<div class="flex items-center text-sm text-gray-600 mb-1">
+<div class="w-4 h-4 flex items-center justify-center mr-2">
+<i class="ri-cpu-line"></i>
+</div>
+Snapdragon 8 Gen 2
+</div>
+<div class="flex items-center text-sm text-gray-600 mb-1">
+<div class="w-4 h-4 flex items-center justify-center mr-2">
+<i class="ri-hard-drive-line"></i>
+</div>
+16 GB RAM / 512 GB Storage
+</div>
+<div class="flex items-center text-sm text-gray-600">
+<div class="w-4 h-4 flex items-center justify-center mr-2">
+<i class="ri-battery-charge-line"></i>
+</div>
+6000 mAh Battery
+</div>
+</div>
+<div class="flex justify-between items-center">
+<div>
+<span class="text-gray-500 text-sm line-through">$1,299.99</span>
+<span class="text-xl font-bold text-gray-900">$1,199.99</span>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-button transition-colors !rounded-button whitespace-nowrap">Add to Cart</button>
+</div>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="gaming-card bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=A%20silver%20and%20blue%20gaming%20smartphone%20with%20geometric%20design%20elements%2C%20floating%20against%20a%20dark%20tech%20background%2C%20ultra-detailed%20product%20photography%2C%208k%20resolution%2C%20studio%20lighting%2C%20professional%20product%20shot&width=600&height=600&seq=3&orientation=squarish" alt="RedMagic 8 Pro" class="w-full h-64 object-cover object-top">
+<span class="absolute top-3 left-3 bg-red-500 text-white text-xs px-2 py-1 rounded-full">Hot Deal</span>
+<button class="absolute top-3 right-3 w-8 h-8 flex items-center justify-center bg-white/80 backdrop-blur-sm rounded-full hover:bg-primary hover:text-white transition-colors">
+<i class="ri-heart-line"></i>
+</button>
+</div>
+<div class="p-4">
+<div class="flex justify-between items-center mb-2">
+<h3 class="text-lg font-semibold">RedMagic 8 Pro</h3>
+<div class="flex items-center bg-green-100 px-2 py-1 rounded-full">
+<span class="text-green-800 text-xs font-medium">9.5</span>
+<div class="w-4 h-4 flex items-center justify-center ml-1">
+<i class="ri-game-line text-green-800 text-xs"></i>
+</div>
+</div>
+</div>
+<div class="mb-3">
+<div class="flex items-center text-sm text-gray-600 mb-1">
+<div class="w-4 h-4 flex items-center justify-center mr-2">
+<i class="ri-cpu-line"></i>
+</div>
+Snapdragon 8 Gen 2
+</div>
+<div class="flex items-center text-sm text-gray-600 mb-1">
+<div class="w-4 h-4 flex items-center justify-center mr-2">
+<i class="ri-hard-drive-line"></i>
+</div>
+12 GB RAM / 256 GB Storage
+</div>
+<div class="flex items-center text-sm text-gray-600">
+<div class="w-4 h-4 flex items-center justify-center mr-2">
+<i class="ri-battery-charge-line"></i>
+</div>
+5000 mAh Battery
+</div>
+</div>
+<div class="flex justify-between items-center">
+<div>
+<span class="text-gray-500 text-sm line-through">$899.99</span>
+<span class="text-xl font-bold text-gray-900">$799.99</span>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-button transition-colors !rounded-button whitespace-nowrap">Add to Cart</button>
+</div>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="gaming-card bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=A%20matte%20black%20gaming%20smartphone%20with%20red%20accents%20and%20angular%20design%2C%20floating%20against%20a%20dark%20tech%20background%2C%20ultra-detailed%20product%20photography%2C%208k%20resolution%2C%20studio%20lighting%2C%20professional%20product%20shot&width=600&height=600&seq=4&orientation=squarish" alt="Black Shark 5 Pro" class="w-full h-64 object-cover object-top">
+<span class="absolute top-3 left-3 bg-blue-500 text-white text-xs px-2 py-1 rounded-full">Best Value</span>
+<button class="absolute top-3 right-3 w-8 h-8 flex items-center justify-center bg-white/80 backdrop-blur-sm rounded-full hover:bg-primary hover:text-white transition-colors">
+<i class="ri-heart-line"></i>
+</button>
+</div>
+<div class="p-4">
+<div class="flex justify-between items-center mb-2">
+<h3 class="text-lg font-semibold">Black Shark 5 Pro</h3>
+<div class="flex items-center bg-green-100 px-2 py-1 rounded-full">
+<span class="text-green-800 text-xs font-medium">9.2</span>
+<div class="w-4 h-4 flex items-center justify-center ml-1">
+<i class="ri-game-line text-green-800 text-xs"></i>
+</div>
+</div>
+</div>
+<div class="mb-3">
+<div class="flex items-center text-sm text-gray-600 mb-1">
+<div class="w-4 h-4 flex items-center justify-center mr-2">
+<i class="ri-cpu-line"></i>
+</div>
+Snapdragon 8 Gen 1
+</div>
+<div class="flex items-center text-sm text-gray-600 mb-1">
+<div class="w-4 h-4 flex items-center justify-center mr-2">
+<i class="ri-hard-drive-line"></i>
+</div>
+8 GB RAM / 128 GB Storage
+</div>
+<div class="flex items-center text-sm text-gray-600">
+<div class="w-4 h-4 flex items-center justify-center mr-2">
+<i class="ri-battery-charge-line"></i>
+</div>
+4650 mAh Battery
+</div>
+</div>
+<div class="flex justify-between items-center">
+<div>
+<span class="text-gray-500 text-sm line-through">$749.99</span>
+<span class="text-xl font-bold text-gray-900">$649.99</span>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-button transition-colors !rounded-button whitespace-nowrap">Add to Cart</button>
+</div>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="gaming-card bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=A%20sleek%20white%20gaming%20smartphone%20with%20blue%20LED%20lighting%20and%20minimalist%20design%2C%20floating%20against%20a%20dark%20tech%20background%2C%20ultra-detailed%20product%20photography%2C%208k%20resolution%2C%20studio%20lighting%2C%20professional%20product%20shot&width=600&height=600&seq=5&orientation=squarish" alt="Lenovo Legion Phone Duel 2" class="w-full h-64 object-cover object-top">
+<span class="absolute top-3 left-3 bg-purple-500 text-white text-xs px-2 py-1 rounded-full">Limited Edition</span>
+<button class="absolute top-3 right-3 w-8 h-8 flex items-center justify-center bg-white/80 backdrop-blur-sm rounded-full hover:bg-primary hover:text-white transition-colors">
+<i class="ri-heart-line"></i>
+</button>
+</div>
+<div class="p-4">
+<div class="flex justify-between items-center mb-2">
+<h3 class="text-lg font-semibold">Legion Phone Duel 2</h3>
+<div class="flex items-center bg-green-100 px-2 py-1 rounded-full">
+<span class="text-green-800 text-xs font-medium">9.0</span>
+<div class="w-4 h-4 flex items-center justify-center ml-1">
+<i class="ri-game-line text-green-800 text-xs"></i>
+</div>
+</div>
+</div>
+<div class="mb-3">
+<div class="flex items-center text-sm text-gray-600 mb-1">
+<div class="w-4 h-4 flex items-center justify-center mr-2">
+<i class="ri-cpu-line"></i>
+</div>
+Snapdragon 888
+</div>
+<div class="flex items-center text-sm text-gray-600 mb-1">
+<div class="w-4 h-4 flex items-center justify-center mr-2">
+<i class="ri-hard-drive-line"></i>
+</div>
+12 GB RAM / 256 GB Storage
+</div>
+<div class="flex items-center text-sm text-gray-600">
+<div class="w-4 h-4 flex items-center justify-center mr-2">
+<i class="ri-battery-charge-line"></i>
+</div>
+5500 mAh Battery
+</div>
+</div>
+<div class="flex justify-between items-center">
+<div>
+<span class="text-gray-500 text-sm line-through">$899.99</span>
+<span class="text-xl font-bold text-gray-900">$699.99</span>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-button transition-colors !rounded-button whitespace-nowrap">Add to Cart</button>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-8 text-center">
+<a href="#" class="inline-flex items-center text-primary hover:text-primary/80 font-medium">
+View All Gaming Phones
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+</div>
+</section>
+<!-- Comparison Tool -->
+<section id="shop" class="py-12 bg-white">
+<div class="container mx-auto px-4">
+<h2 class="text-3xl font-bold text-gray-900 text-center mb-2">Compare Gaming Phones</h2>
+<p class="text-gray-600 text-center mb-8 max-w-2xl mx-auto">Find the perfect gaming phone by comparing key specifications side by side. Select up to 3 phones to compare their gaming performance.</p>
+<div class="bg-gray-50 rounded-lg p-6 border border-gray-200 shadow-sm">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Phone 1 -->
+<div class="bg-white rounded-lg p-4 border border-gray-200">
+<div class="relative">
+<button class="w-full h-12 bg-gray-100 rounded-lg flex items-center justify-between px-4 text-gray-700">
+<span>Select a phone</span>
+<i class="ri-arrow-down-s-line"></i>
+</button>
+<div class="hidden absolute top-full left-0 right-0 mt-1 bg-white rounded-lg shadow-lg border border-gray-200 z-10">
+<div class="p-2">
+<div class="p-2 hover:bg-gray-100 rounded cursor-pointer">ROG Phone 7 Ultimate</div>
+<div class="p-2 hover:bg-gray-100 rounded cursor-pointer">RedMagic 8 Pro</div>
+<div class="p-2 hover:bg-gray-100 rounded cursor-pointer">Black Shark 5 Pro</div>
+<div class="p-2 hover:bg-gray-100 rounded cursor-pointer">Legion Phone Duel 2</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Phone 2 -->
+<div class="bg-white rounded-lg p-4 border border-gray-200">
+<div class="mb-4">
+<img src="https://readdy.ai/api/search-image?query=A%20sleek%20black%20gaming%20smartphone%20with%20RGB%20lighting%20on%20the%20edges%2C%20floating%20against%20a%20dark%20tech%20background%2C%20ultra-detailed%20product%20photography%2C%208k%20resolution%2C%20studio%20lighting%2C%20professional%20product%20shot&width=600&height=600&seq=2&orientation=squarish" alt="ROG Phone 7 Ultimate" class="w-full h-32 object-contain">
+</div>
+<h3 class="text-lg font-semibold mb-2">ROG Phone 7 Ultimate</h3>
+<div class="space-y-2 mb-4">
+<div>
+<span class="text-sm text-gray-600">Processor</span>
+<div class="flex justify-between items-center">
+<span class="font-medium">Snapdragon 8 Gen 2</span>
+<div class="w-4 h-4 flex items-center justify-center text-green-600">
+<i class="ri-check-line"></i>
+</div>
+</div>
+</div>
+<div>
+<span class="text-sm text-gray-600">Display</span>
+<div class="flex justify-between items-center">
+<span class="font-medium">6.78" AMOLED 165Hz</span>
+<div class="w-4 h-4 flex items-center justify-center text-green-600">
+<i class="ri-check-line"></i>
+</div>
+</div>
+</div>
+<div>
+<span class="text-sm text-gray-600">RAM</span>
+<div class="flex justify-between items-center">
+<span class="font-medium">16 GB LPDDR5X</span>
+<div class="w-4 h-4 flex items-center justify-center text-green-600">
+<i class="ri-check-line"></i>
+</div>
+</div>
+</div>
+<div>
+<span class="text-sm text-gray-600">Cooling System</span>
+<div class="flex justify-between items-center">
+<span class="font-medium">GameCool 7</span>
+<div class="w-4 h-4 flex items-center justify-center text-green-600">
+<i class="ri-check-line"></i>
+</div>
+</div>
+</div>
+</div>
+<div>
+<span class="text-sm text-gray-600">Gaming Performance</span>
+<div class="mt-1 performance-bar w-full"></div>
+<div class="flex justify-between text-xs mt-1">
+<span>0</span>
+<span>9.8/10</span>
+</div>
+</div>
+</div>
+<!-- Phone 3 -->
+<div class="bg-white rounded-lg p-4 border border-gray-200">
+<div class="mb-4">
+<img src="https://readdy.ai/api/search-image?query=A%20silver%20and%20blue%20gaming%20smartphone%20with%20geometric%20design%20elements%2C%20floating%20against%20a%20dark%20tech%20background%2C%20ultra-detailed%20product%20photography%2C%208k%20resolution%2C%20studio%20lighting%2C%20professional%20product%20shot&width=600&height=600&seq=3&orientation=squarish" alt="RedMagic 8 Pro" class="w-full h-32 object-contain">
+</div>
+<h3 class="text-lg font-semibold mb-2">RedMagic 8 Pro</h3>
+<div class="space-y-2 mb-4">
+<div>
+<span class="text-sm text-gray-600">Processor</span>
+<div class="flex justify-between items-center">
+<span class="font-medium">Snapdragon 8 Gen 2</span>
+<div class="w-4 h-4 flex items-center justify-center text-green-600">
+<i class="ri-check-line"></i>
+</div>
+</div>
+</div>
+<div>
+<span class="text-sm text-gray-600">Display</span>
+<div class="flex justify-between items-center">
+<span class="font-medium">6.8" AMOLED 120Hz</span>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-500">
+<i class="ri-subtract-line"></i>
+</div>
+</div>
+</div>
+<div>
+<span class="text-sm text-gray-600">RAM</span>
+<div class="flex justify-between items-center">
+<span class="font-medium">12 GB LPDDR5</span>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-500">
+<i class="ri-subtract-line"></i>
+</div>
+</div>
+</div>
+<div>
+<span class="text-sm text-gray-600">Cooling System</span>
+<div class="flex justify-between items-center">
+<span class="font-medium">ICE 11.0</span>
+<div class="w-4 h-4 flex items-center justify-center text-green-600">
+<i class="ri-check-line"></i>
+</div>
+</div>
+</div>
+</div>
+<div>
+<span class="text-sm text-gray-600">Gaming Performance</span>
+<div class="mt-1 performance-bar w-[95%]"></div>
+<div class="flex justify-between text-xs mt-1">
+<span>0</span>
+<span>9.5/10</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 text-center">
+<button class="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-button font-medium transition-colors !rounded-button whitespace-nowrap">Compare Detailed Specs</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Details Section -->
+<section id="compare" class="py-12 bg-gray-50 comparison-tool">
+<div class="container mx-auto px-4">
+<div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Product Gallery -->
+<div class="p-6">
+<div class="mb-4">
+<img src="https://readdy.ai/api/search-image?query=A%20sleek%20black%20gaming%20smartphone%20with%20RGB%20lighting%20on%20the%20edges%2C%20multiple%20angles%20showing%20the%20front%2C%20back%20and%20side%20views%2C%20ultra-detailed%20product%20photography%2C%208k%20resolution%2C%20studio%20lighting%2C%20professional%20product%20shot&width=800&height=600&seq=6&orientation=landscape" alt="ROG Phone 7 Ultimate" class="w-full h-80 object-contain">
+</div>
+<div class="grid grid-cols-4 gap-2">
+<div class="border border-primary rounded-md p-1 cursor-pointer">
+<img src="https://readdy.ai/api/search-image?query=A%20sleek%20black%20gaming%20smartphone%20front%20view%2C%20ultra-detailed%20product%20photography&width=100&height=100&seq=7&orientation=squarish" alt="Front view" class="w-full h-16 object-contain">
+</div>
+<div class="border border-gray-200 rounded-md p-1 cursor-pointer hover:border-primary">
+<img src="https://readdy.ai/api/search-image?query=A%20sleek%20black%20gaming%20smartphone%20back%20view%20with%20RGB%20lighting%2C%20ultra-detailed%20product%20photography&width=100&height=100&seq=8&orientation=squarish" alt="Back view" class="w-full h-16 object-contain">
+</div>
+<div class="border border-gray-200 rounded-md p-1 cursor-pointer hover:border-primary">
+<img src="https://readdy.ai/api/search-image?query=A%20sleek%20black%20gaming%20smartphone%20side%20view%20with%20buttons%2C%20ultra-detailed%20product%20photography&width=100&height=100&seq=9&orientation=squarish" alt="Side view" class="w-full h-16 object-contain">
+</div>
+<div class="border border-gray-200 rounded-md p-1 cursor-pointer hover:border-primary">
+<img src="https://readdy.ai/api/search-image?query=A%20sleek%20black%20gaming%20smartphone%20with%20accessories%20and%20packaging%2C%20ultra-detailed%20product%20photography&width=100&height=100&seq=10&orientation=squarish" alt="Package" class="w-full h-16 object-contain">
+</div>
+</div>
+</div>
+<!-- Product Info -->
+<div class="p-6 border-t md:border-t-0 md:border-l border-gray-200">
+<span class="inline-block bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-full text-sm font-medium mb-2">Premium Gaming</span>
+<h1 class="text-3xl font-bold text-gray-900 mb-2">ROG Phone 7 Ultimate</h1>
+<div class="flex items-center mb-4">
+<div class="flex text-yellow-400">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-half-fill"></i>
+</div>
+<span class="text-gray-600 ml-2">4.8 (128 reviews)</span>
+</div>
+<div class="mb-6">
+<div class="flex items-center">
+<span class="text-3xl font-bold text-gray-900">$1,199.99</span>
+<span class="ml-2 text-lg text-gray-500 line-through">$1,299.99</span>
+<span class="ml-2 bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Save $100</span>
+</div>
+<p class="text-green-600 text-sm mt-1">In stock - Ready to ship</p>
+</div>
+<div class="mb-6">
+<h3 class="text-lg font-semibold mb-2">Gaming Performance</h3>
+<div class="bg-gray-100 rounded-lg p-4">
+<div class="grid grid-cols-2 gap-4">
+<div>
+<p class="text-sm text-gray-600 mb-1">Antutu Benchmark</p>
+<div class="flex items-center">
+<div class="w-full bg-gray-200 rounded-full h-2 mr-2">
+<div class="bg-primary h-2 rounded-full" style="width: 98%"></div>
+</div>
+<span class="text-sm font-medium">1,320,000+</span>
+</div>
+</div>
+<div>
+<p class="text-sm text-gray-600 mb-1">3DMark Wild Life</p>
+<div class="flex items-center">
+<div class="w-full bg-gray-200 rounded-full h-2 mr-2">
+<div class="bg-primary h-2 rounded-full" style="width: 95%"></div>
+</div>
+<span class="text-sm font-medium">14,200+</span>
+</div>
+</div>
+<div>
+<p class="text-sm text-gray-600 mb-1">GeekBench 6</p>
+<div class="flex items-center">
+<div class="w-full bg-gray-200 rounded-full h-2 mr-2">
+<div class="bg-primary h-2 rounded-full" style="width: 96%"></div>
+</div>
+<span class="text-sm font-medium">5,850+</span>
+</div>
+</div>
+<div>
+<p class="text-sm text-gray-600 mb-1">GFXBench</p>
+<div class="flex items-center">
+<div class="w-full bg-gray-200 rounded-full h-2 mr-2">
+<div class="bg-primary h-2 rounded-full" style="width: 97%"></div>
+</div>
+<span class="text-sm font-medium">120+ FPS</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mb-6">
+<h3 class="text-lg font-semibold mb-2">Color</h3>
+<div class="flex space-x-3">
+<button class="w-10 h-10 rounded-full bg-gray-900 border-2 border-primary flex items-center justify-center">
+<i class="ri-check-line text-white"></i>
+</button>
+<button class="w-10 h-10 rounded-full bg-white border-2 border-gray-300 hover:border-primary"></button>
+<button class="w-10 h-10 rounded-full bg-blue-600 border-2 border-gray-300 hover:border-primary"></button>
+</div>
+</div>
+<div class="mb-6">
+<h3 class="text-lg font-semibold mb-2">Storage</h3>
+<div class="flex flex-wrap gap-3">
+<button class="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:border-primary">256 GB</button>
+<button class="px-4 py-2 border-2 border-primary bg-primary/5 rounded-lg text-primary font-medium">512 GB</button>
+<button class="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:border-primary">1 TB</button>
+</div>
+</div>
+<div class="mb-6">
+<div class="flex items-center mb-4">
+<div class="mr-3">
+<button class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center text-gray-600 hover:border-primary hover:text-primary">
+<i class="ri-subtract-line"></i>
+</button>
+</div>
+<input type="number" value="1" min="1" class="w-16 h-10 border border-gray-300 rounded-lg text-center text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary">
+<div class="ml-3">
+<button class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center text-gray-600 hover:border-primary hover:text-primary">
+<i class="ri-add-line"></i>
+</button>
+</div>
+</div>
+<div class="flex flex-wrap gap-3">
+<button class="flex-1 bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-button font-medium transition-colors !rounded-button whitespace-nowrap">Add to Cart</button>
+<button class="bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-button font-medium transition-colors !rounded-button whitespace-nowrap">Buy Now</button>
+<button class="w-12 h-12 flex items-center justify-center border border-gray-300 rounded-full hover:border-primary hover:text-primary transition-colors">
+<i class="ri-heart-line ri-lg"></i>
+</button>
+</div>
+</div>
+<div class="pt-6 border-t border-gray-200">
+<h3 class="text-lg font-semibold mb-2">Gaming Accessories</h3>
+<div class="flex flex-wrap gap-3">
+<div class="flex items-center p-2 border border-gray-200 rounded-lg hover:border-primary cursor-pointer">
+<input type="checkbox" class="custom-checkbox mr-2">
+<span class="text-sm">ROG Kunai 3 Gamepad (+$149.99)</span>
+</div>
+<div class="flex items-center p-2 border border-gray-200 rounded-lg hover:border-primary cursor-pointer">
+<input type="checkbox" class="custom-checkbox mr-2">
+<span class="text-sm">AeroActive Cooler 7 (+$79.99)</span>
+</div>
+<div class="flex items-center p-2 border border-gray-200 rounded-lg hover:border-primary cursor-pointer">
+<input type="checkbox" class="custom-checkbox mr-2">
+<span class="text-sm">ROG Cetra True Wireless (+$129.99)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Product Tabs -->
+<div class="border-t border-gray-200">
+<div class="flex border-b border-gray-200">
+<button class="px-6 py-3 text-primary border-b-2 border-primary font-medium">Specifications</button>
+<button class="px-6 py-3 text-gray-600 hover:text-primary">Gaming Features</button>
+<button class="px-6 py-3 text-gray-600 hover:text-primary">Reviews</button>
+<button class="px-6 py-3 text-gray-600 hover:text-primary">FAQs</button>
+</div>
+<div class="p-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<h3 class="text-lg font-semibold mb-4">Performance</h3>
+<div class="space-y-3">
+<div class="flex">
+<span class="w-1/3 text-gray-600">Processor</span>
+<span class="w-2/3 font-medium">Snapdragon 8 Gen 2 (4nm)</span>
+</div>
+<div class="flex">
+<span class="w-1/3 text-gray-600">GPU</span>
+<span class="w-2/3 font-medium">Adreno 740</span>
+</div>
+<div class="flex">
+<span class="w-1/3 text-gray-600">RAM</span>
+<span class="w-2/3 font-medium">16 GB LPDDR5X</span>
+</div>
+<div class="flex">
+<span class="w-1/3 text-gray-600">Storage</span>
+<span class="w-2/3 font-medium">512 GB UFS 4.0</span>
+</div>
+<div class="flex">
+<span class="w-1/3 text-gray-600">Cooling</span>
+<span class="w-2/3 font-medium">GameCool 7 with 360° CPU Cooling</span>
+</div>
+</div>
+<h3 class="text-lg font-semibold mt-6 mb-4">Display</h3>
+<div class="space-y-3">
+<div class="flex">
+<span class="w-1/3 text-gray-600">Size</span>
+<span class="w-2/3 font-medium">6.78 inches</span>
+</div>
+<div class="flex">
+<span class="w-1/3 text-gray-600">Type</span>
+<span class="w-2/3 font-medium">AMOLED, 1B colors, HDR10+</span>
+</div>
+<div class="flex">
+<span class="w-1/3 text-gray-600">Resolution</span>
+<span class="w-2/3 font-medium">1080 x 2448 pixels (395 ppi)</span>
+</div>
+<div class="flex">
+<span class="w-1/3 text-gray-600">Refresh Rate</span>
+<span class="w-2/3 font-medium">165 Hz</span>
+</div>
+<div class="flex">
+<span class="w-1/3 text-gray-600">Touch Sampling</span>
+<span class="w-2/3 font-medium">720 Hz</span>
+</div>
+<div class="flex">
+<span class="w-1/3 text-gray-600">Protection</span>
+<span class="w-2/3 font-medium">Corning Gorilla Glass Victus 2</span>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-4">Battery & Charging</h3>
+<div class="space-y-3">
+<div class="flex">
+<span class="w-1/3 text-gray-600">Capacity</span>
+<span class="w-2/3 font-medium">6000 mAh (dual 3000 mAh)</span>
+</div>
+<div class="flex">
+<span class="w-1/3 text-gray-600">Fast Charging</span>
+<span class="w-2/3 font-medium">65W HyperCharge</span>
+</div>
+<div class="flex">
+<span class="w-1/3 text-gray-600">Gaming Time</span>
+<span class="w-2/3 font-medium">Up to 8 hours continuous gaming</span>
+</div>
+</div>
+<h3 class="text-lg font-semibold mt-6 mb-4">Gaming Features</h3>
+<div class="space-y-3">
+<div class="flex">
+<span class="w-1/3 text-gray-600">AirTriggers</span>
+<span class="w-2/3 font-medium">Ultrasonic AirTrigger 7</span>
+</div>
+<div class="flex">
+<span class="w-1/3 text-gray-600">Audio</span>
+<span class="w-2/3 font-medium">Dual front-facing speakers with Dirac HD Sound</span>
+</div>
+<div class="flex">
+<span class="w-1/3 text-gray-600">Haptics</span>
+<span class="w-2/3 font-medium">X-axis linear motor</span>
+</div>
+<div class="flex">
+<span class="w-1/3 text-gray-600">Connectivity</span>
+<span class="w-2/3 font-medium">Wi-Fi 7, Bluetooth 5.3, 5G</span>
+</div>
+<div class="flex">
+<span class="w-1/3 text-gray-600">RGB Lighting</span>
+<span class="w-2/3 font-medium">ROG Vision color PMOLED display</span>
+</div>
+</div>
+<h3 class="text-lg font-semibold mt-6 mb-4">Dimensions</h3>
+<div class="space-y-3">
+<div class="flex">
+<span class="w-1/3 text-gray-600">Size</span>
+<span class="w-2/3 font-medium">173 x 77 x 10.3 mm</span>
+</div>
+<div class="flex">
+<span class="w-1/3 text-gray-600">Weight</span>
+<span class="w-2/3 font-medium">239 g</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Checkout Process -->
+<section id="shop" class="py-12 bg-white">
+<div class="container mx-auto px-4">
+<h2 class="text-3xl font-bold text-gray-900 text-center mb-2">Streamlined Checkout Process</h2>
+<p class="text-gray-600 text-center mb-8 max-w-2xl mx-auto">Our mobile-optimized checkout makes purchasing your gaming gear quick and easy, with multiple payment options and secure transactions.</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Step 1 -->
+<div class="bg-gray-50 rounded-lg p-6 border border-gray-200 shadow-sm">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+<i class="ri-shopping-cart-line ri-lg text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold mb-2">1. Review Cart</h3>
+<p class="text-gray-600 mb-4">Review your gaming gear, adjust quantities, and apply any promo codes before proceeding.</p>
+<div class="bg-white rounded-lg p-4 border border-gray-200 mb-4">
+<div class="flex items-center mb-3">
+<img src="https://readdy.ai/api/search-image?query=A%20sleek%20black%20gaming%20smartphone%20with%20RGB%20lighting%20on%20the%20edges%2C%20ultra-detailed%20product%20photography%2C%208k%20resolution%2C%20studio%20lighting%2C%20professional%20product%20shot&width=100&height=100&seq=11&orientation=squarish" alt="ROG Phone 7 Ultimate" class="w-16 h-16 object-cover rounded-md mr-3">
+<div class="flex-1">
+<h4 class="font-medium">ROG Phone 7 Ultimate</h4>
+<p class="text-sm text-gray-600">512 GB, Black</p>
+</div>
+<span class="font-medium">$1,199.99</span>
+</div>
+<div class="flex items-center">
+<img src="https://readdy.ai/api/search-image?query=A%20black%20gaming%20controller%20attachment%20for%20smartphones%2C%20ultra-detailed%20product%20photography%2C%208k%20resolution%2C%20studio%20lighting%2C%20professional%20product%20shot&width=100&height=100&seq=12&orientation=squarish" alt="ROG Kunai 3 Gamepad" class="w-16 h-16 object-cover rounded-md mr-3">
+<div class="flex-1">
+<h4 class="font-medium">ROG Kunai 3 Gamepad</h4>
+<p class="text-sm text-gray-600">Black</p>
+</div>
+<span class="font-medium">$149.99</span>
+</div>
+</div>
+<div class="flex justify-between text-sm mb-1">
+<span class="text-gray-600">Subtotal</span>
+<span class="font-medium">$1,349.98</span>
+</div>
+<div class="flex justify-between text-sm mb-3">
+<span class="text-gray-600">Shipping</span>
+<span class="font-medium">Free</span>
+</div>
+<div class="flex justify-between font-medium">
+<span>Total</span>
+<span>$1,349.98</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="bg-gray-50 rounded-lg p-6 border border-gray-200 shadow-sm">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+<i class="ri-map-pin-line ri-lg text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold mb-2">2. Shipping Details</h3>
+<p class="text-gray-600 mb-4">Enter your shipping information or select from saved addresses for quick checkout.</p>
+<div class="space-y-3 mb-4">
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+<input type="text" value="Alexander Mitchell" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-1">Address</label>
+<input type="text" value="1234 Gaming Street, Apt 42" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-1">City</label>
+<input type="text" value="San Francisco" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-1">ZIP Code</label>
+<input type="text" value="94107" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+</div>
+</div>
+</div>
+<div class="mb-4">
+<label class="block text-sm font-medium text-gray-700 mb-1">Shipping Method</label>
+<div class="space-y-2">
+<div class="flex items-center p-3 border border-primary bg-primary/5 rounded-lg">
+<input type="radio" name="shipping" checked class="custom-radio mr-3">
+<div class="flex-1">
+<div class="font-medium">Express Shipping</div>
+<div class="text-sm text-gray-600">2-3 Business Days</div>
+</div>
+<span class="font-medium">Free</span>
+</div>
+<div class="flex items-center p-3 border border-gray-200 rounded-lg hover:border-primary">
+<input type="radio" name="shipping" class="custom-radio mr-3">
+<div class="flex-1">
+<div class="font-medium">Next Day Delivery</div>
+<div class="text-sm text-gray-600">Guaranteed by Tomorrow</div>
+</div>
+<span class="font-medium">+$19.99</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="bg-gray-50 rounded-lg p-6 border border-gray-200 shadow-sm">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+<i class="ri-secure-payment-line ri-lg text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold mb-2">3. Payment & Confirmation</h3>
+<p class="text-gray-600 mb-4">Choose your preferred payment method and complete your order securely.</p>
+<div class="mb-4">
+<label class="block text-sm font-medium text-gray-700 mb-1">Payment Method</label>
+<div class="space-y-2">
+<div class="flex items-center p-3 border border-primary bg-primary/5 rounded-lg">
+<input type="radio" name="payment" checked class="custom-radio mr-3">
+<div class="flex-1 flex items-center">
+<div class="w-8 h-8 flex items-center justify-center mr-2">
+<i class="ri-visa-fill ri-lg"></i>
+</div>
+<div>
+<div class="font-medium">Credit Card</div>
+<div class="text-sm text-gray-600">Visa ending in 4242</div>
+</div>
+</div>
+</div>
+<div class="flex items-center p-3 border border-gray-200 rounded-lg hover:border-primary">
+<input type="radio" name="payment" class="custom-radio mr-3">
+<div class="flex-1 flex items-center">
+<div class="w-8 h-8 flex items-center justify-center mr-2">
+<i class="ri-paypal-fill ri-lg text-blue-600"></i>
+</div>
+<div class="font-medium">PayPal</div>
+</div>
+</div>
+<div class="flex items-center p-3 border border-gray-200 rounded-lg hover:border-primary">
+<input type="radio" name="payment" class="custom-radio mr-3">
+<div class="flex-1 flex items-center">
+<div class="w-8 h-8 flex items-center justify-center mr-2">
+<i class="ri-apple-fill ri-lg"></i>
+</div>
+<div class="font-medium">Apple Pay</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mb-4">
+<div class="flex items-center mb-3">
+<input type="checkbox" checked class="custom-checkbox mr-2">
+<span class="text-sm text-gray-700">Save payment information for future purchases</span>
+</div>
+<div class="flex items-center">
+<input type="checkbox" checked class="custom-checkbox mr-2">
+<span class="text-sm text-gray-700">Email me about special gaming phone offers</span>
+</div>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-white py-3 rounded-button font-medium transition-colors !rounded-button whitespace-nowrap">Complete Purchase</button>
+<div class="mt-3 flex items-center justify-center text-sm text-gray-600">
+<div class="w-4 h-4 flex items-center justify-center mr-1">
+<i class="ri-lock-line"></i>
+</div>
+Secure checkout with 256-bit encryption
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white pt-12 pb-6">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+<div>
+<a href="#" class="text-2xl font-['Pacifico'] text-primary mb-4 inline-block">logo</a>
+<p class="text-gray-400 mb-4">The ultimate destination for gaming phones and accessories. Level up your mobile gaming experience with cutting-edge technology.</p>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
+<i class="ri-twitter-x-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
+<i class="ri-instagram-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
+<i class="ri-youtube-fill"></i>
+</a>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-4">Shop</h3>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Gaming Phones</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Accessories</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Cooling Solutions</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Gaming Earbuds</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Controllers</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Special Offers</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-4">Support</h3>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Contact Us</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">FAQs</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Shipping Policy</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Returns & Refunds</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Warranty Information</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Gaming Guides</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+<p class="text-gray-400 mb-4">Subscribe to get special offers, free giveaways, and gaming tips.</p>
+<div class="flex mb-4">
+<input type="email" placeholder="Your email address" class="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-primary text-white">
+<button class="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-r-lg transition-colors !rounded-button whitespace-nowrap">Subscribe</button>
+</div>
+<div class="flex flex-wrap gap-2">
+<div class="w-8 h-5 flex items-center justify-center">
+<i class="ri-visa-fill text-gray-300 ri-lg"></i>
+</div>
+<div class="w-8 h-5 flex items-center justify-center">
+<i class="ri-mastercard-fill text-gray-300 ri-lg"></i>
+</div>
+<div class="w-8 h-5 flex items-center justify-center">
+<i class="ri-paypal-fill text-gray-300 ri-lg"></i>
+</div>
+<div class="w-8 h-5 flex items-center justify-center">
+<i class="ri-apple-fill text-gray-300 ri-lg"></i>
+</div>
+<div class="w-8 h-5 flex items-center justify-center">
+<i class="ri-google-fill text-gray-300 ri-lg"></i>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-6 border-t border-gray-800 text-center text-gray-400 text-sm">
+<p>© 2025 GameGear. All rights reserved. Designed for gaming enthusiasts.</p>
+</div>
+</div>
+</footer>
+<!-- Floating Compare Button -->
+<div class="fixed bottom-6 right-6 z-10">
+<button class="bg-primary hover:bg-primary/90 text-white w-14 h-14 rounded-full shadow-lg flex flex-col items-center justify-center transition-colors">
+<i class="ri-scales-3-line ri-lg mb-1"></i>
+<span class="text-xs">Compare</span>
+</button>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Navigation functionality
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+
+    // Category navigation
+    const categoryLinks = document.querySelectorAll('.bg-gray-800 a');
+    categoryLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+
+    // Product tabs functionality
+    const tabButtons = document.querySelectorAll('.border-b.border-gray-200 button');
+    const tabContents = document.querySelectorAll('.product-tab-content');
+    
+    tabButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove active state from all buttons
+            tabButtons.forEach(btn => {
+                btn.classList.remove('text-primary', 'border-b-2', 'border-primary');
+                btn.classList.add('text-gray-600');
+            });
+            
+            // Add active state to clicked button
+            this.classList.remove('text-gray-600');
+            this.classList.add('text-primary', 'border-b-2', 'border-primary');
+            
+            // Show corresponding content
+            const targetTab = this.textContent.toLowerCase().replace(/\s+/g, '-');
+            tabContents.forEach(content => {
+                content.classList.add('hidden');
+                if (content.getAttribute('data-tab') === targetTab) {
+                    content.classList.remove('hidden');
+                }
+            });
+        });
+    });
+
+    // Compare button functionality
+    const compareButton = document.querySelector('.fixed.bottom-6.right-6 button');
+    compareButton.addEventListener('click', function() {
+        const compareSection = document.querySelector('.comparison-tool');
+        if (compareSection) {
+            compareSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+
+    // Shop Now and Compare Models buttons
+    const actionButtons = document.querySelectorAll('.hero-section .flex.flex-wrap.gap-4 a');
+    actionButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+
+    // Custom checkbox functionality
+    const customCheckboxes = document.querySelectorAll('.custom-checkbox');
+    customCheckboxes.forEach(checkbox => {
+        checkbox.addEventListener('click', function() {
+            this.checked = !this.checked;
+        });
+    });
+
+    // Custom radio functionality
+    const customRadios = document.querySelectorAll('.custom-radio');
+    customRadios.forEach(radio => {
+        radio.addEventListener('click', function() {
+            const name = this.getAttribute('name');
+            document.querySelectorAll(`.custom-radio[name="${name}"]`).forEach(r => {
+                r.checked = false;
+            });
+            this.checked = true;
+        });
+    });
+
+    // Add to Cart functionality
+    const addToCartButtons = document.querySelectorAll('button:contains("Add to Cart")');
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const cartCount = document.querySelector('.absolute.-top-1.-right-1');
+            if (cartCount) {
+                let count = parseInt(cartCount.textContent) || 0;
+                cartCount.textContent = count + 1;
+            }
+        });
+    });
+
+    // Wishlist functionality
+    const wishlistButtons = document.querySelectorAll('button:has(.ri-heart-line)');
+    wishlistButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const icon = button.querySelector('.ri-heart-line');
+            if (icon) {
+                icon.classList.toggle('ri-heart-line');
+                icon.classList.toggle('ri-heart-fill');
+                icon.classList.toggle('text-red-500');
+            }
+        });
+    });
+});
+</script>
+</body>
+</html>
