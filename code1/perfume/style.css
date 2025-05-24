@@ -1,0 +1,335 @@
+
+body {
+    background: linear-gradient(135deg, #0f0f0f, #1a1a1a); /* dark gamer background */
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    background: linear-gradient(90deg, #0f0f0f, #1a1a1a); /* dark gradient */
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05); 
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar:hover {
+    background: linear-gradient(90deg, #1a1a1a, #262626); 
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover img {
+    transform: scale(1.1); 
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff !important;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0 10px;
+    text-transform: capitalize;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-nav .nav-link.active {
+    color: #ff66b2 !important; /* neon pink accent */
+    font-weight: bold; 
+    border-bottom: 2px solid #ff66b2; 
+    transform: scale(1.1); 
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ff66b2 !important; 
+    transform: scale(1.1);
+}
+
+.navbar-toggler {
+    border-color: #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.navbar-toggler:hover {
+    transform: rotate(90deg); 
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(to right, #0f0c29, #302b63, #ff0080); /* pink & dark tones */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(6px); 
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 2px 10px rgba(255, 0, 128, 0.5);
+}
+
+
+.hero h1, .hero p, .hero a {
+    position: relative;
+    z-index: 2;
+}
+
+.hero .btn {
+    background-color: #7b1fa2;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 25px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero .btn:hover {
+    background-color: #4a148c;
+    transform: scale(1.1);
+}
+
+
+.fade-in {
+    animation: fadeIn 2s ease-in-out;
+}
+
+.slide-in {
+    animation: slideIn 1.5s ease-in-out;
+}
+
+.pulse {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+.card {
+    border: none;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
+    box-shadow: 0 4px 12px rgba(255, 0, 128, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #ffffff;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 0, 128, 0.4); /* stronger pink glow */
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    filter: brightness(0.9); /* darkens image slightly to match theme */
+}
+
+.card-title {
+    color: #ff66b2;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(255, 102, 178, 0.5);
+}
+
+.card-text {
+    color: #dcdcdc;
+}
+
+fofooter {
+    background: linear-gradient(to right, #0f0f0f, #1a1a1a);
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1em;
+    border-top: 3px solid #ff66b2;
+    box-shadow: 0 -2px 8px rgba(255, 0, 128, 0.2);
+}
+
+.card-title:hover {
+    text-shadow: 0 0 10px #ff66b2, 0 0 20px #ff66b2;
+}
+
+
+.about-section {
+    background-color: #f3e5f5;
+    padding: 50px 0;
+}
+
+.about-section h2 {
+    color: #4a148c;
+    font-weight: bold;
+}
+
+.about-section p {
+    color: #6a1b9a;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Gallery Page */
+.gallery-section {
+    padding: 50px 0;
+}
+
+.gallery-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-section img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+.contact-form {
+    background-color: #f3e5f5;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form h2 {
+    color: #4a148c;
+    font-weight: bold;
+}
+
+.contact-form label {
+    color: #6a1b9a;
+    font-weight: 500;
+}
+
+.contact-form input, .contact-form textarea {
+    border: 1px solid #7b1fa2;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.contact-form button {
+    background-color: #7b1fa2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #4a148c;
+}
+
+
+.shop-header {
+    background: linear-gradient(90deg, #6a1b9a, #8e24aa);
+    padding: 50px 0;
+    color: white;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+.product-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-card img {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product-card .card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-card .btn {
+    background-color: #7b1fa2;
+    border: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.product-card .btn:hover {
+    background-color: #4a148c;
+    transform: scale(1.05);
+}
